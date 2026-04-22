@@ -155,9 +155,9 @@
         <rd:DataSetName>DSReportes</rd:DataSetName>
         <rd:SchemaPath>c:\Desarrollo\7nomades\Librerias\Negocio\Negocio.Reporting\reporting\datasets\DSReportes.xsd</rd:SchemaPath>
         <rd:TableName>DTCertificado</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
+        <rd:TableAdapterFillMethod/>
+        <rd:TableAdapterGetDataMethod/>
+        <rd:TableAdapterName/>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DTCobertura">
@@ -183,9 +183,9 @@
         <rd:DataSetName>DSReportes</rd:DataSetName>
         <rd:SchemaPath>c:\Desarrollo\7nomades\Librerias\Negocio\Negocio.Reporting\reporting\datasets\DSReportes.xsd</rd:SchemaPath>
         <rd:TableName>DTCobertura</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
+        <rd:TableAdapterFillMethod/>
+        <rd:TableAdapterGetDataMethod/>
+        <rd:TableAdapterName/>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DTUpgradeCobertura">
@@ -223,255 +223,251 @@
         <rd:DataSetName>DSReportes</rd:DataSetName>
         <rd:SchemaPath>c:\Desarrollo\7nomades\Librerias\Negocio\Negocio.Reporting\reporting\datasets\DSReportes.xsd</rd:SchemaPath>
         <rd:TableName>DTUpgradeCobertura</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
+        <rd:TableAdapterFillMethod/>
+        <rd:TableAdapterGetDataMethod/>
+        <rd:TableAdapterName/>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  
-      <Body>
+  <Body>
+    <ReportItems>
+      <Rectangle Name="Page1Container">
         <ReportItems>
-          <Image Name="image1">
+          <Image Name="HeaderLogo">
             <Source>Embedded</Source>
             <Value>LogoNuevo</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.05in</Top>
-            <Left>0.19957cm</Left>
-            <Height>2.19285cm</Height>
-            <Width>7.02734cm</Width>
+            <Top>0.1cm</Top>
+            <Left>0.2cm</Left>
+            <Height>2.2cm</Height>
+            <Width>7cm</Width>
             <Visibility>
-              <Hidden>= (Parameters!eshojamembretada.Value)
-OR (Parameters!tipologo.Value = 2) OR (Parameters!tipologo.Value = 3)</Hidden>
+              <Hidden>= (Parameters!eshojamembretada.Value) OR (Parameters!tipologo.Value = 2) OR (Parameters!tipologo.Value = 3)</Hidden>
             </Visibility>
-            <DataElementOutput>NoOutput</DataElementOutput>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Image>
-          <Rectangle Name="Rectangle6">
+          <Image Name="HeaderLogoAlt">
+            <Source>External</Source>
+            <Value>=First(Fields!EmisorLogo.Value, &quot;DTCertificado&quot;)</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.1cm</Top>
+            <Left>0.2cm</Left>
+            <Height>2.2cm</Height>
+            <Width>7cm</Width>
+            <Visibility>
+              <Hidden>= (Parameters!tipologo.Value = 0) OR (Parameters!tipologo.Value = 1)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Rectangle Name="HeaderPanel">
             <ReportItems>
-              <Tablix Name="Tablix4">
-                <TablixBody>
-                  <TablixColumns>
-                    <TablixColumn>
-                      <Width>12.60225cm</Width>
-                    </TablixColumn>
-                    <TablixColumn>
-                      <Width>5.81499cm</Width>
-                    </TablixColumn>
-                  </TablixColumns>
-                  <TablixRows>
-                    <TablixRow>
-                      <Height>0.55671cm</Height>
-                      <TablixCells>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Textbox4">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!cob_tituloizquierda.Value</Value>
-                                      <Style>
-                                        <FontFamily>=Parameters!fuente.Value</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox4</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>Solid</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Textbox22">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!cob_tituloderecha.Value</Value>
-                                      <Style>
-                                        <FontFamily>=Parameters!fuente.Value</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox22</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>Solid</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                      </TablixCells>
-                    </TablixRow>
-                    <TablixRow>
-                      <Height>0.49623cm</Height>
-                      <TablixCells>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Nombre2">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!Nombre.Value</Value>
-                                      <Style>
-                                        <FontFamily>=Parameters!fuente.Value</FontFamily>
-                                        <FontSize>8pt</FontSize>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Nombre</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>Solid</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Valor2">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!Valor.Value</Value>
-                                      <Style>
-                                        <FontFamily>=Parameters!fuente.Value</FontFamily>
-                                        <FontSize>8pt</FontSize>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Valor</rd:DefaultName>
-                              <ZIndex>1</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>Solid</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                      </TablixCells>
-                    </TablixRow>
-                  </TablixRows>
-                </TablixBody>
-                <TablixColumnHierarchy>
-                  <TablixMembers>
-                    <TablixMember />
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixColumnHierarchy>
-                <TablixRowHierarchy>
-                  <TablixMembers>
-                    <TablixMember>
-                      <KeepWithGroup>After</KeepWithGroup>
-                    </TablixMember>
-                    <TablixMember>
-                      <Group Name="Details2" />
-                      <TablixMembers>
-                        <TablixMember />
-                      </TablixMembers>
-                    </TablixMember>
-                  </TablixMembers>
-                </TablixRowHierarchy>
-                <DataSetName>DTCobertura</DataSetName>
-                <Top>0.71313cm</Top>
-                <Left>0.13169cm</Left>
-                <Height>1.05294cm</Height>
-                <Width>18.41724cm</Width>
+              <Textbox Name="HeaderVoucherTitle">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=&quot;Voucher Nro. &quot; + First(Fields!EndosoVoucherId.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                          <FontSize>14pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>White</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0cm</Top>
+                <Left>0cm</Left>
+                <Height>0.95cm</Height>
+                <Width>10.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>#1a5c38</BackgroundColor>
+                  <PaddingLeft>4pt</PaddingLeft>
+                  <PaddingRight>6pt</PaddingRight>
+                  <PaddingTop>3pt</PaddingTop>
+                  <PaddingBottom>3pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="HeaderPlan">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>PLAN : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!Producto.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.05cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>10.8cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
                 </Style>
-              </Tablix>
-              <Textbox Name="cob_titulo">
+              </Textbox>
+              <Textbox Name="HeaderDestino">
                 <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=UCase(Parameters!cob_titulo.Value)</Value>
+                        <Value>DESTINO : </Value>
                         <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                          <FontWeight>SemiBold</FontWeight>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                         </Style>
                       </TextRun>
                       <TextRun>
-                        <Value xml:space="preserve"> </Value>
+                        <Value>=First(Fields!ViajePaisDestino.Value, &quot;DTCertificado&quot;)</Value>
                         <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                          <FontWeight>SemiBold</FontWeight>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=UCase(First(Fields!Producto.Value, "DTCertificado"))</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                          <FontWeight>SemiBold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style />
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
                   </Paragraph>
                 </Paragraphs>
-                <rd:DefaultName>cob_titulo</rd:DefaultName>
-                <Left>0.12037cm</Left>
-                <Height>0.6cm</Height>
-                <Width>18.42856cm</Width>
-                <ZIndex>1</ZIndex>
+                <Top>1.5cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>10.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="HeaderVigencia">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>VIGENCIA : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Day(First(Fields!ViajeFechaSalida.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Month(First(Fields!ViajeFechaSalida.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Year(First(Fields!ViajeFechaSalida.Value, &quot;DTCertificado&quot;)).ToString(&quot;0000&quot;) + &quot; - &quot; + Day(First(Fields!ViajeFechaRegreso.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Month(First(Fields!ViajeFechaRegreso.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Year(First(Fields!ViajeFechaRegreso.Value, &quot;DTCertificado&quot;)).ToString(&quot;0000&quot;) + &quot; (&quot; + First(Fields!ViajeVigencia.Value, &quot;DTCertificado&quot;).ToString() + &quot; días)&quot;</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.95cm</Top>
+                <Left>0cm</Left>
+                <Height>0.5cm</Height>
+                <Width>10.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="HeaderEmitidoPor">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>EMITIDO POR : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!EmisorNombre.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.45cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>10.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="HeaderFechaEmision">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>FECHA DE EMISIÓN : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Day(First(Fields!EmisionFecha.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Month(First(Fields!EmisionFecha.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Year(First(Fields!EmisionFecha.Value, &quot;DTCertificado&quot;)).ToString(&quot;0000&quot;)</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.9cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>10.8cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -479,476 +475,669 @@ OR (Parameters!tipologo.Value = 2) OR (Parameters!tipologo.Value = 3)</Hidden>
                 </Style>
               </Textbox>
             </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>4.67769cm</Top>
-            <Height>1.778cm</Height>
-            <Width>18.72533cm</Width>
-            <ZIndex>1</ZIndex>
+            <Top>0cm</Top>
+            <Left>7.4cm</Left>
+            <Height>3.45cm</Height>
+            <Width>10.8cm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#d0d0d0</Color>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="TravelerBand">
+            <ReportItems>
+              <Textbox Name="TravelerLine1">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>NOMBRE DEL VIAJERO : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!ViajeroApellido.Value, &quot;DTCertificado&quot;) + &quot;, &quot; + First(Fields!ViajeroNombre.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value xml:space="preserve">   DOCUMENTO : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!ViajeroPasaporte.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value xml:space="preserve">   EDAD ACTUAL : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!ViajeroEdad.Value, &quot;DTCertificado&quot;).ToString()</Value>
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.1cm</Top>
+                <Left>0.15cm</Left>
+                <Height>0.55cm</Height>
+                <Width>17.75cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TravelerLine2">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>PERSONA A CONTACTAR EN CASO DE EMERGENCIA : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!EmergenciaApellido.Value, &quot;DTCertificado&quot;) + &quot;, &quot; + First(Fields!EmergenciaNombre.Value, &quot;DTCertificado&quot;) + &quot;   (Teléfono: &quot; + First(Fields!EmergenciaTelefono.Value, &quot;DTCertificado&quot;) + &quot;)&quot;</Value>
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.67cm</Top>
+                <Left>0.15cm</Left>
+                <Height>0.55cm</Height>
+                <Width>17.75cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <Top>3.65cm</Top>
+            <Left>0.2cm</Left>
+            <Height>1.35cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#cfcfcf</Color>
+              </Border>
+              <BackgroundColor>#f0f0f0</BackgroundColor>
+              <PaddingLeft>4pt</PaddingLeft>
+              <PaddingRight>4pt</PaddingRight>
+              <PaddingTop>4pt</PaddingTop>
+              <PaddingBottom>4pt</PaddingBottom>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="AssistanceBand">
+            <ReportItems>
+              <Textbox Name="AssistanceLine1">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>CENTRAL DE ASISTENCIAS  📞 +54 9 11 6876-8015</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>16pt</FontSize>
+                          <Color>White</Color>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.12cm</Top>
+                <Left>0.1cm</Left>
+                <Height>0.75cm</Height>
+                <Width>17.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="AssistanceLine2">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Las 24 horas, los 7 días de la semana, los 365 días del año.</Value>
+                        <Style>
+                          <FontStyle>Italic</FontStyle>
+                          <FontSize>11pt</FontSize>
+                          <Color>White</Color>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.9cm</Top>
+                <Left>0.1cm</Left>
+                <Height>0.48cm</Height>
+                <Width>17.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="AssistanceLine3">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Recomendamos agendarlo en su móvil antes del inicio del viaje.</Value>
+                        <Style>
+                          <FontStyle>Italic</FontStyle>
+                          <FontSize>11pt</FontSize>
+                          <Color>White</Color>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.38cm</Top>
+                <Left>0.1cm</Left>
+                <Height>0.48cm</Height>
+                <Width>17.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <Top>5.2cm</Top>
+            <Left>0.2cm</Left>
+            <Height>1.95cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>#4a9e6b</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Textbox Name="ImportantTextInline">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>IMPORTANTE: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <FontSize>8pt</FontSize>
+                      <Color>#cc0000</Color>
+                      <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=UCase(Parameters!lblfooter1.Value)</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>Black</Color>
+                      <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style/>
+              </Paragraph>
+            </Paragraphs>
+            <Top>7.35cm</Top>
+            <Left>0.2cm</Left>
+            <Height>0.45cm</Height>
+            <Width>18cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle9">
+          </Textbox>
+          <Rectangle Name="LineasGratuitasBlock">
             <ReportItems>
-              <Textbox Name="Textbox1">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
+              <Textbox Name="LineasGratuitasTitulo">
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Parameters!us_titulo.Value</Value>
-                        <MarkupType>HTML</MarkupType>
+                        <Value>🔔 Líneas gratuitas desde teléfono fijo | Si te encontrás en:</Value>
                         <Style>
-                          <FontFamily>= Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                          <FontWeight>SemiBold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>0.1534cm</Top>
-                <Left>0.0882cm</Left>
-                <Height>0.6cm</Height>
-                <Width>18.36442cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-              <Textbox Name="footerinfo2">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna1.Value, "\n", Microsoft.VisualBasic.Constants.vbCrLf)</Value>
-                        <MarkupType>HTML</MarkupType>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>1.41382cm</Top>
-                <Left>0.11935cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>9.07004cm</Width>
-                <ZIndex>1</ZIndex>
-                <Visibility>
-                  <Hidden>=Parameters!eshojamembretada.Value</Hidden>
-                </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="footerinfo5">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna2.Value, "\n", Microsoft.VisualBasic.Constants.vbCrLf)</Value>
-                        <MarkupType>HTML</MarkupType>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>1.41382cm</Top>
-                <Left>9.25994cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>9.22383cm</Width>
-                <ZIndex>2</ZIndex>
-                <Visibility>
-                  <Hidden>=Parameters!eshojamembretada.Value</Hidden>
-                </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
-                <Style>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="footerinfo10">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!lblfooter5.Value, "\n", Microsoft.VisualBasic.Constants.vbCrLf)</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>1.96841cm</Top>
-                <Left>0.11935cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>18.34897cm</Width>
-                <ZIndex>3</ZIndex>
-                <Visibility>
-                  <Hidden>=Parameters!eshojamembretada.Value</Hidden>
-                </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox35">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!titrecomendaciones.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox35</rd:DefaultName>
-                <Top>4.07827cm</Top>
-                <Left>0.0882cm</Left>
-                <Height>0.63003cm</Height>
-                <Width>18.41203cm</Width>
-                <ZIndex>4</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox24">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!lblrecomendaciones.Value</Value>
-                        <MarkupType>HTML</MarkupType>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
+                          <FontWeight>Bold</FontWeight>
                           <FontSize>8pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style />
+                    <Style/>
                   </Paragraph>
                 </Paragraphs>
-                <rd:DefaultName>Textbox24</rd:DefaultName>
-                <Top>4.74357cm</Top>
-                <Left>0.08407cm</Left>
-                <Height>0.40583cm</Height>
-                <Width>18.41616cm</Width>
-                <ZIndex>5</ZIndex>
+                <Top>0.08cm</Top>
+                <Left>0.1cm</Left>
+                <Height>0.4cm</Height>
+                <Width>17.8cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
                 </Style>
               </Textbox>
-              <Image Name="Image2">
-                <Source>Embedded</Source>
-                <Value>datos_de_contacto</Value>
-                <Sizing>FitProportional</Sizing>
-                <Top>2.63188cm</Top>
-                <Left>0.0882cm</Left>
-                <Height>0.48958in</Height>
-                <Width>7.24235in</Width>
-                <ZIndex>6</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Image>
-              <Textbox Name="footerinfo3">
+              <Textbox Name="LineasCol1">
                 <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Parameters!lblfooter1.Value</Value>
-                        <MarkupType>HTML</MarkupType>
+                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna1.Value, &quot;\n&quot;, Microsoft.VisualBasic.Constants.vbCrLf)</Value>
                         <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>8pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
+                    <Style/>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.85923cm</Top>
-                <Left>0.1029cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>6.08248cm</Width>
-                <ZIndex>7</ZIndex>
+                <Top>0.52cm</Top>
+                <Left>0.1cm</Left>
+                <Height>1.05cm</Height>
+                <Width>8.75cm</Width>
                 <Visibility>
                   <Hidden>=Parameters!eshojamembretada.Value</Hidden>
                 </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
-              <Textbox Name="footerinfo4">
+              <Textbox Name="LineasCol2">
                 <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Parameters!lblfooter2.Value</Value>
-                        <MarkupType>HTML</MarkupType>
+                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna2.Value, &quot;\n&quot;, Microsoft.VisualBasic.Constants.vbCrLf)</Value>
                         <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>8pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
+                    <Style/>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.85923cm</Top>
-                <Left>6.25593cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>6.08248cm</Width>
-                <ZIndex>8</ZIndex>
+                <Top>0.52cm</Top>
+                <Left>9.1cm</Left>
+                <Height>1.05cm</Height>
+                <Width>8.75cm</Width>
                 <Visibility>
                   <Hidden>=Parameters!eshojamembretada.Value</Hidden>
                 </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
-              <Textbox Name="footerinfo6">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
+              <Textbox Name="LineasRestoMundo">
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Parameters!lblfooter3.Value</Value>
-                        <MarkupType>HTML</MarkupType>
+                        <Value>🔔 Resto del mundo (Cobro revertido) (5411) 4130 – 0300</Value>
                         <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
+                    <Style/>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.85924cm</Top>
-                <Left>12.38584cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>6.08248cm</Width>
-                <ZIndex>9</ZIndex>
-                <Visibility>
-                  <Hidden>=Parameters!eshojamembretada.Value</Hidden>
-                </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
+                <Top>1.62cm</Top>
+                <Left>0.1cm</Left>
+                <Height>0.4cm</Height>
+                <Width>17.8cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
             </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>9.11317cm</Top>
-            <Left>0.01672cm</Left>
-            <Height>5.19065cm</Height>
-            <Width>18.7189cm</Width>
-            <ZIndex>2</ZIndex>
+            <Top>7.8cm</Top>
+            <Left>0.2cm</Left>
+            <Height>2.1cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#d9d9d9</Color>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Tablix Name="CoberturasTablix">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>12.6cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>5.4cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.62cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CobHeaderLeft">
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=UCase(Parameters!cob_titulo.Value) + &quot; &quot; + UCase(First(Fields!Producto.Value, &quot;DTCertificado&quot;))</Value>
+                                  <Style>
+                                    <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style/>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                              <Color>#d9d9d9</Color>
+                            </Border>
+                            <BackgroundColor>#1a5c38</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CobHeaderRight">
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Parameters!cob_tituloderecha.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style/>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                              <Color>#d9d9d9</Color>
+                            </Border>
+                            <BackgroundColor>#1a5c38</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.5cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CobNombre">
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Nombre.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style/>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                              <Color>#d9d9d9</Color>
+                            </Border>
+                            <BackgroundColor>=IIF(RowNumber(Nothing) mod 2 = 0, &quot;#f0f0f0&quot;, &quot;White&quot;)</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CobValor">
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Valor.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style/>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                              <Color>#d9d9d9</Color>
+                            </Border>
+                            <BackgroundColor>=IIF(RowNumber(Nothing) mod 2 = 0, &quot;#f0f0f0&quot;, &quot;White&quot;)</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember/>
+                <TablixMember/>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="CoberturasDetails"/>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DTCobertura</DataSetName>
+            <Top>10.1cm</Top>
+            <Left>0.2cm</Left>
+            <Height>1.12cm</Height>
+            <Width>18cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle10">
+          </Tablix>
+          <Rectangle Name="UpgradeCoberturasBlock">
             <ReportItems>
-              <Textbox Name="cob_titulo2">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
+              <Textbox Name="UpgradeTitle">
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
                         <Value>=Parameters!upg_cob_titulo.Value</Value>
                         <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                          <FontWeight>SemiBold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                          <FontSize>9pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>White</Color>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style />
+                    <Style/>
                   </Paragraph>
                 </Paragraphs>
-                <rd:DefaultName>upg_cob_titulo</rd:DefaultName>
-                <Left>0.05648cm</Left>
-                <Height>0.6cm</Height>
-                <Width>18.42856cm</Width>
+                <Top>0cm</Top>
+                <Left>0cm</Left>
+                <Height>0.55cm</Height>
+                <Width>18cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  <BackgroundColor>#1a5c38</BackgroundColor>
+                  <PaddingLeft>4pt</PaddingLeft>
+                  <PaddingTop>2pt</PaddingTop>
                 </Style>
               </Textbox>
-              <Tablix Name="Tablix2">
+              <Tablix Name="UpgradeTablix">
                 <TablixBody>
                   <TablixColumns>
                     <TablixColumn>
-                      <Width>12.60506cm</Width>
+                      <Width>12.6cm</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>5.8787cm</Width>
+                      <Width>5.4cm</Width>
                     </TablixColumn>
                   </TablixColumns>
                   <TablixRows>
                     <TablixRow>
-                      <Height>0.50625cm</Height>
+                      <Height>0.45cm</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox5">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
+                            <Textbox Name="UpgradeNombre">
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>="[" + Fields!VoucherId.Value + "] " + Fields!Nombre.Value</Value>
+                                      <Value>=&quot;[&quot; + Fields!VoucherId.Value + &quot;] &quot; + Fields!Nombre.Value</Value>
                                       <Style>
-                                        <FontFamily>= Parameters!fuente.Value</FontFamily>
+                                        <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                                         <FontSize>8pt</FontSize>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style />
+                                  <Style/>
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox5</rd:DefaultName>
                               <Style>
                                 <Border>
-                                  <Style>None</Style>
+                                  <Style>Solid</Style>
+                                  <Color>#d9d9d9</Color>
                                 </Border>
-                                <BackgroundColor>=IIF(RowNumber(Nothing) mod 2,"WhiteSmoke","White")</BackgroundColor>
+                                <BackgroundColor>=IIF(RowNumber(Nothing) mod 2 = 0, &quot;#f0f0f0&quot;, &quot;White&quot;)</BackgroundColor>
                                 <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox18">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
+                            <Textbox Name="UpgradeValor">
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=Fields!Valor.Value</Value>
                                       <Style>
-                                        <FontFamily>= Parameters!fuente.Value</FontFamily>
+                                        <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
                                         <FontSize>8pt</FontSize>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style />
+                                  <Style/>
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox18</rd:DefaultName>
                               <Style>
                                 <Border>
-                                  <Style>None</Style>
+                                  <Style>Solid</Style>
+                                  <Color>#d9d9d9</Color>
                                 </Border>
-                                <BackgroundColor>=IIF(RowNumber(Nothing) mod 2,"WhiteSmoke","White")</BackgroundColor>
+                                <BackgroundColor>=IIF(RowNumber(Nothing) mod 2 = 0, &quot;#f0f0f0&quot;, &quot;White&quot;)</BackgroundColor>
                                 <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -959,75 +1148,35 @@ OR (Parameters!tipologo.Value = 2) OR (Parameters!tipologo.Value = 3)</Hidden>
                 </TablixBody>
                 <TablixColumnHierarchy>
                   <TablixMembers>
-                    <TablixMember />
-                    <TablixMember />
+                    <TablixMember/>
+                    <TablixMember/>
                   </TablixMembers>
                 </TablixColumnHierarchy>
                 <TablixRowHierarchy>
                   <TablixMembers>
                     <TablixMember>
-                      <Group Name="Details1" />
+                      <Group Name="UpgradeDetailsGroup"/>
                     </TablixMember>
                   </TablixMembers>
                 </TablixRowHierarchy>
                 <DataSetName>DTUpgradeCobertura</DataSetName>
-                <Top>0.6cm</Top>
-                <Left>0.07377cm</Left>
-                <Height>0.50625cm</Height>
-                <Width>18.48376cm</Width>
-                <ZIndex>1</ZIndex>
+                <Top>0.56cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>18cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
                 </Style>
               </Tablix>
-              <Textbox Name="footerinfo13">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=REPLACE(Parameters!upg_comentario.Value, "\n", Microsoft.VisualBasic.Constants.vbCrLf)</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>7pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>1.24736cm</Top>
-                <Left>0.06771cm</Left>
-                <Height>0.44875cm</Height>
-                <Width>18.51284cm</Width>
-                <ZIndex>2</ZIndex>
-                <Visibility>
-                  <Hidden>=Parameters!eshojamembretada.Value</Hidden>
-                </Visibility>
-                <DataElementOutput>NoOutput</DataElementOutput>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
             </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>6.56428cm</Top>
-            <Height>1.77278cm</Height>
-            <Width>18.72533cm</Width>
-            <ZIndex>3</ZIndex>
+            <Top>11.35cm</Top>
+            <Left>0.2cm</Left>
+            <Height>1.1cm</Height>
+            <Width>18cm</Width>
             <Visibility>
-              <Hidden>=CBool(IIF(CountRows("DTUpgradeCobertura") &gt; 0, False, True))</Hidden>
+              <Hidden>=CBool(IIF(CountRows(&quot;DTUpgradeCobertura&quot;) &gt; 0, False, True))</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -1035,791 +1184,747 @@ OR (Parameters!tipologo.Value = 2) OR (Parameters!tipologo.Value = 3)</Hidden>
               </Border>
             </Style>
           </Rectangle>
-          <Textbox Name="Textbox8">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!cert_beneficiario_titulo.Value</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>: </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=iif (IsNothing(First(Fields!ViajeroApellido.Value, "DTCertificado"))
-, First(Fields!ViajeroNombre.Value, "DTCertificado")
-, iif(CSTR(First(Fields!ViajeroApellido.Value, "DTCertificado"))= ""
-, First(Fields!ViajeroNombre.Value, "DTCertificado")
-, First(Fields!ViajeroApellido.Value, "DTCertificado") + ", " + First(Fields!ViajeroNombre.Value, "DTCertificado")
-))</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve"> </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!cert_documento_titulo.Value</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>: </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=First(Fields!ViajeroPasaporte.Value, "DTCertificado")</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve"> </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!cert_beneficiario_edad.Value</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>: </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=First(Fields!ViajeroEdad.Value, "DTCertificado")</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>3.47242cm</Top>
-            <Left>0.13607cm</Left>
-            <Height>0.5cm</Height>
-            <Width>18.49421cm</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox11">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!titemergencia.Value</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>: </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=iif (IsNothing(First(Fields!EmergenciaApellido.Value, "DTCertificado"))
-, First(Fields!EmergenciaNombre.Value, "DTCertificado")
-, iif(CSTR(First(Fields!EmergenciaApellido.Value, "DTCertificado"))= ""
-, First(Fields!EmergenciaNombre.Value, "DTCertificado")
-, First(Fields!EmergenciaApellido.Value, "DTCertificado") + ", " + First(Fields!EmergenciaNombre.Value, "DTCertificado")
-))</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value> (</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!lbltelefono.Value</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>: </Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>= First(Fields!EmergenciaTelefono.Value, "DTCertificado")</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>)</Value>
-                    <Style>
-                      <FontFamily>=Parameters!fuente.Value</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.01056cm</Top>
-            <Left>0.13607cm</Left>
-            <Height>0.5cm</Height>
-            <Width>18.49877cm</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Rectangle Name="Rectangle4">
-            <ReportItems>
-              <Textbox Name="Textbox7">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=IIf(Parameters!voucherestado.Value="ANULADO" , Parameters!voucheranulado.Value, Parameters!cert_titulo.Value)</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>18pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value xml:space="preserve"> </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>18pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=  First(Fields!EndosoVoucherId.Value, "DTCertificado")</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>18pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox7</rd:DefaultName>
-                <Top>0.20709cm</Top>
-                <Left>0.21808cm</Left>
-                <Height>0.71521cm</Height>
-                <Width>10.84672cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox14">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!lblproducto.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>: </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=First(Fields!Producto.Value, "DTCertificado")</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value xml:space="preserve"> </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox7</rd:DefaultName>
-                <Top>0.99285cm</Top>
-                <Left>0.20238cm</Left>
-                <Height>0.4cm</Height>
-                <Width>10.86242cm</Width>
-                <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox15">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!lblvigencia.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>: </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>= Day(First(Fields!ViajeFechaSalida.Value, "DTCertificado")).ToString("00")+ "/"
-+ Month(First(Fields!ViajeFechaSalida.Value, "DTCertificado")).ToString("00")+ "/"
-+ Year(First(Fields!ViajeFechaSalida.Value, "DTCertificado")).ToString("0000")
-+ " - "
-+ Day(First(Fields!ViajeFechaRegreso.Value, "DTCertificado")).ToString("00")+ "/"
-+ Month(First(Fields!ViajeFechaRegreso.Value, "DTCertificado")).ToString("00")+ "/"
-+ Year(First(Fields!ViajeFechaRegreso.Value, "DTCertificado")).ToString("0000")</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value> (</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=First(Fields!ViajeVigencia.Value, "DTCertificado").ToString()</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value xml:space="preserve"> </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=Parameters!lbldias.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>)</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox7</rd:DefaultName>
-                <Top>1.86341cm</Top>
-                <Left>0.20238cm</Left>
-                <Height>0.4cm</Height>
-                <Width>10.86242cm</Width>
-                <ZIndex>2</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox16">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!lblresidenciadestino.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>: </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=First(Fields!ViajePaisDestino.Value, "DTCertificado")</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox7</rd:DefaultName>
-                <Top>1.42813cm</Top>
-                <Left>0.20238cm</Left>
-                <Height>0.4cm</Height>
-                <Width>10.86242cm</Width>
-                <ZIndex>3</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox12">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!emitidopor.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>: </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=Parameters!emisor.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox7</rd:DefaultName>
-                <Top>2.29869cm</Top>
-                <Left>0.20238cm</Left>
-                <Height>0.4cm</Height>
-                <Width>10.86242cm</Width>
-                <ZIndex>4</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox13">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!lblfecha.Value</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>: </Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value>=Day(First(Fields!EndosoVoucherFecha.Value, "DTCertificado")).ToString("00")+ "/"
-+ Month(First(Fields!EndosoVoucherFecha.Value, "DTCertificado")).ToString("00")+ "/"
-+ Year(First(Fields!EndosoVoucherFecha.Value, "DTCertificado")).ToString("0000")</Value>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>11pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox7</rd:DefaultName>
-                <Top>2.73396cm</Top>
-                <Left>0.20238cm</Left>
-                <Height>0.4cm</Height>
-                <Width>10.86242cm</Width>
-                <ZIndex>5</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Textbox>
-            </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>0.00706cm</Top>
-            <Left>7.47415cm</Left>
-            <Height>3.37076cm</Height>
-            <Width>11.16069cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle1">
-            <ReportItems>
-              <Textbox Name="Textbox2">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!us_leyenda.Value</Value>
-                        <MarkupType>HTML</MarkupType>
-                        <Style>
-                          <FontFamily>=Parameters!fuente.Value</FontFamily>
-                          <FontSize>8pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0.07028cm</Top>
-                <Left>0.05174cm</Left>
-                <Height>0.52944cm</Height>
-                <Width>18.44886cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-            </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>8.40762cm</Top>
-            <Left>0.02203cm</Left>
-            <Height>0.61327cm</Height>
-            <Width>18.71359cm</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Rectangle>
-          <Image Name="image2">
-            <Source>Embedded</Source>
-            <Value>LogoNuevo</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>1.05136in</Top>
-            <Left>5.14328cm</Left>
-            <Height>0.6368cm</Height>
-            <Width>2.08363cm</Width>
-            <ZIndex>8</ZIndex>
-            <Visibility>
-              <Hidden>= (Parameters!tipologo.Value&lt;&gt;2)</Hidden>
-            </Visibility>
-            <DataElementOutput>NoOutput</DataElementOutput>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
-          <Image Name="image3">
-            <Source>External</Source>
-            <Value>=First(Fields!EmisorLogo.Value, "DTCertificado")</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>0.02778in</Top>
-            <Left>0.17135cm</Left>
-            <Height>2.19285cm</Height>
-            <Width>7.02734cm</Width>
-            <ZIndex>9</ZIndex>
-            <Visibility>
-              <Hidden>= (Parameters!tipologo.Value = 0) OR (Parameters!tipologo.Value = 1)</Hidden>
-            </Visibility>
-            <DataElementOutput>NoOutput</DataElementOutput>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
-          <Textbox Name="Textbox3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!frase_18.Value, "\n", Microsoft.VisualBasic.Constants.vbCrLf)</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>14.67874cm</Top>
-            <Left>3.58385cm</Left>
-            <Height>2.80486cm</Height>
-            <Width>2.61825cm</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox6">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!frase_19.Value, "\n", Microsoft.VisualBasic.Constants.vbCrLf)</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>14.67555cm</Top>
-            <Left>9.72045cm</Left>
-            <Height>2.80486cm</Height>
-            <Width>2.69599cm</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Image Name="Image5">
-            <Source>External</Source>
-            <Value>=Parameters!pathqrfooter.Value</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>14.67874cm</Top>
-            <Left>0.36224cm</Left>
-            <Height>3.04364cm</Height>
-            <Width>3.18633cm</Width>
-            <ZIndex>12</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
-          <Image Name="Image4">
-            <Source>External</Source>
-            <Value>=Parameters!app_qr.Value</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>14.67555cm</Top>
-            <Left>6.49884cm</Left>
-            <Height>3.04683cm</Height>
-            <Width>3.18633cm</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
-          <Textbox Name="Textbox9">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value EvaluationMode="Constant">Condiciones Generales</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>14.65297cm</Top>
-            <Left>16.13194cm</Left>
-            <Height>2.80486cm</Height>
-            <Width>2.3374cm</Width>
-            <ZIndex>14</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Image Name="Image6">
-            <Source>External</Source>
-            <Value>=Parameters!path_qr_ccgg.Value</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>14.65297cm</Top>
-            <Left>12.91033cm</Left>
-            <Height>3.04683cm</Height>
-            <Width>3.18633cm</Width>
-            <ZIndex>15</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
         </ReportItems>
-        <Height>7.02398in</Height>
+        <Top>0cm</Top>
+        <Left>0cm</Left>
+        <Height>12.6cm</Height>
+        <Width>18cm</Width>
+        <PageBreak>
+          <BreakLocation>End</BreakLocation>
+        </PageBreak>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
-      </Body>
-      <Width>7.40866in</Width>
-      <Page>
-        <PageFooter>
-          <Height>0.33516cm</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
-        <PageHeight>29.7cm</PageHeight>
-        <PageWidth>21cm</PageWidth>
-        <LeftMargin>1cm</LeftMargin>
-        <RightMargin>1cm</RightMargin>
-        <TopMargin>1cm</TopMargin>
-        <BottomMargin>1cm</BottomMargin>
-        <ColumnSpacing>0.13cm</ColumnSpacing>
-        <Style />
-      </Page>
-    
+      </Rectangle>
+      <Rectangle Name="Page2Container">
+        <ReportItems>
+          <Rectangle Name="TarjetaRecortable">
+            <ReportItems>
+              <Image Name="TarjetaLogo">
+                <Source>Embedded</Source>
+                <Value>LogoNuevo</Value>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.2cm</Top>
+                <Left>0.3cm</Left>
+                <Height>1cm</Height>
+                <Width>3.2cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+              <Image Name="TarjetaQR">
+                <Source>Embedded</Source>
+                <Value>qr_voucher</Value>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.2cm</Top>
+                <Left>4cm</Left>
+                <Height>2cm</Height>
+                <Width>2cm</Width>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Color>#cccccc</Color>
+                  </Border>
+                </Style>
+              </Image>
+              <Textbox Name="TarjetaNombre">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>NOMBRE Y APELLIDO</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>7pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!ViajeroApellido.Value, &quot;DTCertificado&quot;) + &quot;, &quot; + First(Fields!ViajeroNombre.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.4cm</Top>
+                <Left>0.3cm</Left>
+                <Height>0.85cm</Height>
+                <Width>6cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaVoucher">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>VOUCHER NRO</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>7pt</FontSize>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value xml:space="preserve"> </Value>
+                        <Style/>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!EndosoVoucherId.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.35cm</Top>
+                <Left>0.3cm</Left>
+                <Height>0.45cm</Height>
+                <Width>6.5cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaVigencia">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>VIGENCIA DESDE/HASTA </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>7pt</FontSize>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Day(First(Fields!ViajeFechaSalida.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Month(First(Fields!ViajeFechaSalida.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Year(First(Fields!ViajeFechaSalida.Value, &quot;DTCertificado&quot;)).ToString(&quot;0000&quot;) + &quot; - &quot; + Day(First(Fields!ViajeFechaRegreso.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Month(First(Fields!ViajeFechaRegreso.Value, &quot;DTCertificado&quot;)).ToString(&quot;00&quot;) + &quot;/&quot; + Year(First(Fields!ViajeFechaRegreso.Value, &quot;DTCertificado&quot;)).ToString(&quot;0000&quot;)</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.85cm</Top>
+                <Left>0.3cm</Left>
+                <Height>0.45cm</Height>
+                <Width>9.5cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaProducto">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>PRODUCTO </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>7pt</FontSize>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=First(Fields!Producto.Value, &quot;DTCertificado&quot;)</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.35cm</Top>
+                <Left>0.3cm</Left>
+                <Height>0.45cm</Height>
+                <Width>9.5cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaBadge">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>365 días 24 horas EN TU PROPIO IDIOMA</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                          <FontSize>8pt</FontSize>
+                          <Color>White</Color>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.95cm</Top>
+                <Left>0.3cm</Left>
+                <Height>0.55cm</Height>
+                <Width>9.3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>#4a9e6b</BackgroundColor>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaRightTitle">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Líneas gratuitas, desde teléfono fijo, según su ubicación:</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.2cm</Top>
+                <Left>10.2cm</Left>
+                <Height>0.5cm</Height>
+                <Width>7.3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaRightCol1">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna1.Value, &quot;\n&quot;, Microsoft.VisualBasic.Constants.vbCrLf)</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.75cm</Top>
+                <Left>10.2cm</Left>
+                <Height>2.2cm</Height>
+                <Width>3.5cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaRightCol2">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna2.Value, &quot;\n&quot;, Microsoft.VisualBasic.Constants.vbCrLf)</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.75cm</Top>
+                <Left>13.9cm</Left>
+                <Height>2.2cm</Height>
+                <Width>3.6cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaRightPhone">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Llamada Cobro Revertido: 54 11 4130-0300</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.1cm</Top>
+                <Left>10.2cm</Left>
+                <Height>0.35cm</Height>
+                <Width>7.3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaRightContact1">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>También puede comunicarse con nosotros a través de</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.5cm</Top>
+                <Left>10.2cm</Left>
+                <Height>0.35cm</Height>
+                <Width>7.3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="TarjetaRightContact2">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>asistencia@coris.com.ar</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>+54 9 11 6876-8015</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.85cm</Top>
+                <Left>10.2cm</Left>
+                <Height>0.7cm</Height>
+                <Width>7.3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <Top>0.2cm</Top>
+            <Left>0.2cm</Left>
+            <Height>4.8cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>Dashed</Style>
+                <Color>#a7a7a7</Color>
+                <Width>1pt</Width>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Textbox Name="ImportantGreenBand">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!lblfooter1.Value</Value>
+                    <Style>
+                      <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.2cm</Top>
+            <Left>0.2cm</Left>
+            <Height>0.7cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>#4a9e6b</BackgroundColor>
+              <PaddingTop>4pt</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="LegalParagraph">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Microsoft.VisualBasic.Strings.REPLACE(Parameters!cert_columna1.Value, &quot;\n&quot;, Microsoft.VisualBasic.Constants.vbCrLf)</Value>
+                    <Style>
+                      <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style/>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.05cm</Top>
+            <Left>0.2cm</Left>
+            <Height>1.6cm</Height>
+            <Width>18cm</Width>
+            <Visibility>
+              <Hidden>=Parameters!eshojamembretada.Value</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Textbox>
+          <Rectangle Name="RecomendacionesBlock">
+            <ReportItems>
+              <Textbox Name="RecomendacionesTitle">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!titrecomendaciones.Value</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>#1a5c38</Color>
+                          <FontSize>10pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>18cm</Width>
+                <Style>
+                  <Border>
+                    <Bottom>
+                      <Style>Solid</Style>
+                      <Color>#1a5c38</Color>
+                    </Bottom>
+                  </Border>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <Top>7.8cm</Top>
+            <Left>0.2cm</Left>
+            <Height>3cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Textbox Name="RecomendacionesText">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!lblrecomendaciones.Value</Value>
+                    <MarkupType>HTML</MarkupType>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style/>
+              </Paragraph>
+            </Paragraphs>
+            <Top>8.35cm</Top>
+            <Left>0.9cm</Left>
+            <Height>2.2cm</Height>
+            <Width>17.1cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Textbox>
+          <Rectangle Name="RecursosUtilesBlock">
+            <ReportItems>
+              <Textbox Name="RecursosTitle">
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>RECURSOS ÚTILES</Value>
+                        <Style>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>#1a5c38</Color>
+                          <FontSize>10pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style/>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0cm</Top>
+                <Left>0cm</Left>
+                <Height>0.45cm</Height>
+                <Width>18cm</Width>
+                <Style>
+                  <Border>
+                    <Bottom>
+                      <Style>Solid</Style>
+                      <Color>#1a5c38</Color>
+                    </Bottom>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Image Name="RecursoQRMovil">
+                <Source>Embedded</Source>
+                <Value>qr_movil</Value>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.55cm</Top>
+                <Left>1.1cm</Left>
+                <Height>3cm</Height>
+                <Width>3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Color>#cfcfcf</Color>
+                  </Border>
+                </Style>
+              </Image>
+              <Textbox Name="RecursoTextMovil">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>DESCARGA EL VOUCHER EN TU MÓVIL</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.65cm</Top>
+                <Left>0.2cm</Left>
+                <Height>0.8cm</Height>
+                <Width>4.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Image Name="RecursoQRApp">
+                <Source>Embedded</Source>
+                <Value>qr_app</Value>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.55cm</Top>
+                <Left>7.6cm</Left>
+                <Height>3cm</Height>
+                <Width>3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Color>#cfcfcf</Color>
+                  </Border>
+                </Style>
+              </Image>
+              <Textbox Name="RecursoTextApp">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>DESCARGA LA APP DE CORIS Y LLEVÁ ASISTENCIA EN TU MÓVIL</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.65cm</Top>
+                <Left>5.9cm</Left>
+                <Height>0.8cm</Height>
+                <Width>6.4cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Image Name="RecursoQRCondiciones">
+                <Source>Embedded</Source>
+                <Value>qr_condiciones</Value>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.55cm</Top>
+                <Left>14.1cm</Left>
+                <Height>3cm</Height>
+                <Width>3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Color>#cfcfcf</Color>
+                  </Border>
+                </Style>
+              </Image>
+              <Textbox Name="RecursoTextCondiciones">
+                <CanGrow>true</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>DESCARGA LAS CONDICIONES GENERALES</Value>
+                        <Style>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <FontFamily>=IIF(IsNothing(Parameters!fuente.Value) OR Trim(Parameters!fuente.Value)=&quot;&quot;, &quot;Calibri&quot;, Parameters!fuente.Value)</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.65cm</Top>
+                <Left>12.9cm</Left>
+                <Height>0.8cm</Height>
+                <Width>4.8cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <Top>10.95cm</Top>
+            <Left>0.2cm</Left>
+            <Height>4.6cm</Height>
+            <Width>18cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+        </ReportItems>
+        <Top>12.9cm</Top>
+        <Left>0cm</Left>
+        <Height>15.8cm</Height>
+        <Width>18cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>28.7cm</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>18cm</Width>
+  <Page>
+    <PageFooter>
+      <Height>0.33516cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>1.5cm</LeftMargin>
+    <RightMargin>1.5cm</RightMargin>
+    <TopMargin>1.5cm</TopMargin>
+    <BottomMargin>1.5cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style/>
+  </Page>
   <ReportParameters>
     <ReportParameter Name="pathlogoheaderleft">
       <DataType>String</DataType>
@@ -2241,7 +2346,6 @@ OR (Parameters!tipologo.Value = 2) OR (Parameters!tipologo.Value = 3)</Hidden>
       <Prompt>path_qr_ccgg</Prompt>
     </ReportParameter>
   </ReportParameters>
-  
   <EmbeddedImages>
     <EmbeddedImage Name="LogoNuevo">
       <MIMEType>image/jpeg</MIMEType>
@@ -2334,6 +2438,22 @@ HM6TyiPgN4hmdJ5RHwG8R7AUTIgstyJoPHM6TyiPgN4hmdJ5RHwG8R7AUTIgstyJoPHM6TyiPgN4hmdJ
 Md02tRF849QDp1ERNQ8paanmVFmiZIqbCK9qOw3z4zCh0aLgN4jIAqp1HOTUVdJj5hQ6NFwG8QzCh0aLgN4jIB2qnbTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSY+YUOjRcBvEMwodGi4DeIyAKqLTuKXSeUVPTw
 4rDEyNV28hqNx3j1AOEVVV1cYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//0ezAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/9LswAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="qr_voucher">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/aX8AAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="qr_movil">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/aX8AAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="qr_app">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/aX8AAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="qr_condiciones">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/aX8AAAAASUVORK5CYII=</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
